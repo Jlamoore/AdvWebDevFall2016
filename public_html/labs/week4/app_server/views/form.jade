@@ -1,0 +1,14 @@
+extends layout
+
+block content
+ h1=title
+ h2=message
+ form.form-horizontal(action="/form", method="post", role="form")
+        .form-group
+          label.control-label(for="name") Name        
+            input#name.form-control(name="Name")
+          label.control-label(for="name") Email        
+            input#name.form-control(name="Email")  
+          label.control-label(for="name") Comments       
+            input#name.form-control(name="Comments")       
+        input(type="submit" value="Collect My Info")
