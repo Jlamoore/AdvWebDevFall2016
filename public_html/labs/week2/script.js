@@ -59,13 +59,39 @@ var callback = {
 function displayContent() {
     var callback2 = {
         success: function (data) {
-            console.log(data.picture);
-            switch(data.picture)
+            console.log(data);
+            var about = document.createElement("p");
+            var stuff = [];
+            stuff.push("name", "company", "email", "address", "registered", "age", "eyeColor", "greeting", "favoriteFruit", "balance", "about");
+            var i = 0;
+            stuff.forEach(function (things) {
+                var p = document.createElement("p");
+                var strong = document.createElement("b");
+                strong.innerHTML = things + ": ";
+                p.appendChild(strong);
+                if (i === 0)
+                    p.innerHTML = "<b>" + things + ": </b>" + data[things].first + " " + data[things].last;
+                else
+                    p.innerHTML = "<b>" + things + ": </b>" + data[things];
+                document.getElementsByTagName("article")[0].appendChild(p);
+                i++;
+            });
+            if(data.isActive === true)
+            {
+               document.getElementsByTagName("article")[0].className = "active";
+            }
+            else
+            {
+                document.getElementsByTagName("article")[0].className = "inactive";
+            }
+
+            switch (data.picture)
             {
                 case"male.png":
                     var img = document.createElement("img");
                     img.setAttribute("src", "img/male.png");
                     document.getElementsByTagName("figure")[0].appendChild(img);
+                    console.log(img.innerHTML);
                     break;
             }
         },
