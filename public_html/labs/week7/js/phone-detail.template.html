@@ -1,0 +1,8 @@
+<h1>{{vm.phone.name | uppercase}}</h1>
+<!--Grab the name from the phone from the object returned in the controller-->
+<div class="content">
+    <!--grab the img url, carrier, and snippet as done above-->
+    <img ng-src="{{vm.phone.imageUrl}}" />
+    <p ng-if="vm.phone.carrier.length > 0"><strong>Carrier:</strong> {{vm.phone.carrier}}</p>
+    <p>{{vm.phone.snippet}}</p>
+</div>
