@@ -1,0 +1,35 @@
+extends layout
+
+block content
+    h1=title
+    p=removed
+    table(border="1")
+        thead   
+            tr
+                th First Name
+                th Last Name
+                th Department
+                th Start Date
+                th Job Title
+                th Salary
+                th
+                th
+        tbody
+        - each result in results
+            tr
+                td 
+                    = result.firstName
+                td 
+                    = result.lastName
+                td 
+                    = result.department
+                td 
+                    = result.startDate.toDateString()
+                td
+                    = result.jobTitle
+                td
+                    = result.salary
+                td
+                    a(href="../update/#{result._id}") Update
+                td
+                    a(href="../view/#{result._id}") Delete

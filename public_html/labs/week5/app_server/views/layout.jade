@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title= title
+    link(rel='stylesheet', href='/css/materialize.css')
+  body
+nav
+ div.nav-wrapper
+      ul#nav-mobile.right.hide-on-med-and-down
+        |#[li #[a(href='./') Home]]
+        |#[li #[a(href='/view') View]]
+        |#[li #[a(href='/about') About]]
+div.container
+      block content
