@@ -1,0 +1,32 @@
+<h1>{{vm.title}}</h1>
+
+<div class="content">
+
+    <p ng-class="{'msg' : vm.message.length}">{{vm.message}}</p>
+    <p><a href="#/">Home</a></p>
+
+    <br />
+    <br />
+    <div class="form">
+        <label class="col-xs-10 col-sm-2 control-label">First Name</label>
+        <input id="name" class="form-control col-xs-12 col-sm-10" name="firstName" required type="text" ng-model="vm.data.firstName"/>
+        <br />
+        <label class="col-xs-10 col-sm-2 control-label" >Last Name
+        </label>
+        <input id="name" class="form-control col-xs-12 col-sm-10" name="lastName" required type="text" ng-model="vm.data.lastName"/>
+        <br />
+        <label class="col-xs-10 col-sm-2 control-label" >Department
+        </label>
+        <input id="name" class="form-control col-xs-12 col-sm-10" name="department" required type="text" ng-model="vm.data.department"/>
+        <br />
+        <label class="col-xs-10 col-sm-2 control-label" >Job Title
+        </label>
+        <input id="name" class="form-control col-xs-12 col-sm-10" name="jobTitle" required type="text" ng-model="vm.data.jobTitle"/>
+        <br />
+        <label class="col-xs-10 col-sm-2 control-label" >Salary
+        </label>
+        <input id="name" class="form-control col-xs-12 col-sm-10" name="salary" required type="Number" ng-model="vm.data.salary"/>
+        <br /> <br />   
+        <input type="submit" value="Submit" ng-click="vm.submit()" />
+    </div>
+</div>
